@@ -1,0 +1,166 @@
+@font-face{
+    font-family:"pixel";
+    src:url(./pixcyr2.ttf);
+}
+
+body {
+    height: 100%;
+    margin-top: 20px;
+    font-family:"pixel";
+}
+
+body {
+    background: rgba(241, 238, 238, 0.925);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+body.active{
+    background: rgba(12, 12, 12, 0.925);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    border: 2px solid white;
+    background-color: rgba(184, 184, 184, 0.192);
+    width: 10cm;
+    height: 16cm;
+    border-radius: 5px;
+}
+
+canvas.active{
+    border: 2px solid white;
+    background-color: rgba(184, 184, 184, 0.192);
+    width: 10cm;
+    height: 16cm;
+    border-radius: 5px;
+    
+}
+
+.info{
+    display: inline-block;
+    border: double 4px;
+    border-radius: 5px;
+    border-color: rgb(163, 92, 0);
+    background-color: rgba(230, 148, 41, 0.616);
+    margin: 0rem 2rem 2rem 2rem;
+    padding: 2rem;
+    
+    
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+span{
+    background-color: rgba(70, 69, 69, 0.945);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.space-left{
+    display: inline-block;
+    margin: 0rem 2rem 2rem 2rem;
+    
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#button-start{
+    font-size: 30px;
+    border: rgb(128,128,128) 2px solid;
+    border-radius: 5px;
+    color: crimson;
+    background-color: rgba(235, 202, 111, 0.932);
+    font-family:"pixel";
+    cursor:pointer;
+}
+
+.botones{
+    display: inline-block;
+    background-color: transparent;
+    margin: 2rem 2rem 2rem 2rem;
+    padding: 2rem;
+    
+}
+
+.button{
+    border: none;
+    background-color: transparent;
+    cursor:pointer;
+}
+
+.button.active{
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.pause-play{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+#icon{
+    font-size: 40px; 
+    margin-left: 80px;
+}
+
+#icon-reset{
+    font-size: 35px; 
+}
+
+.points{
+    margin: 30px 10px 30px 20px;
+    border: rgb(128,128,128) 2px solid;
+    border-radius: 5px;
+    color: rgb(7, 7, 7);
+    background-color: rgba(235, 233, 230, 0.966);
+}
+
+.record{
+    margin: 30px 10px 30px 20px;
+    border: rgb(128,128,128) 2px solid;
+    border-radius: 5px;
+    color: rgb(7, 7, 7);
+    background-color: rgba(235, 233, 230, 0.966);
+}
+
+.dark{
+    margin: 40px 20px 40px 0px;
+    font-size: 30px;
+    border: rgb(128,128,128) 2px solid;
+    border-radius: 5px;
+    color: rgb(7, 7, 7);
+    background-color: rgba(173, 17, 17, 0.849);
+    font-family:"pixel";
+    cursor:pointer;
+}
+
+.light{
+    margin: 40px 15px 40px 18px;
+    font-size: 30px;
+    border: rgb(128,128,128) 2px solid;
+    border-radius: 5px;
+    color: rgb(7, 7, 7);
+    background-color: rgba(52, 182, 52, 0.952);
+    font-family:"pixel";
+    cursor:pointer;
+}

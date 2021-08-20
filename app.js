@@ -121,7 +121,8 @@ function showStarting() {
 
     context.globalAlpha = 1;
     context.fillStyle = "white";
-    context.font = "40px monospace";
+    context.font = "40px pixel";
+    context.fontfamily = "pixel";
     context.textAlign = "center";
     context.textBaseline = "middle";
     context.fillText(
@@ -141,7 +142,8 @@ function showGameOver() {
 
     context.globalAlpha = 1;
     context.fillStyle = "white";
-    context.font = "40px monospace";
+    context.font = "40px pixel";
+    context.fontfamily = "pixel";
     context.textAlign = "center";
     context.textBaseline = "middle";
     context.fillText(
@@ -157,8 +159,16 @@ const grid = 32;
 const tetrominoSequence = [];
 const playfield = [];
 const start = document.getElementById("button-start");
+const light = document.getElementById("light");
+const dark = document.getElementById("dark");
+const body = document.getElementById("body");
+const playButton = document.getElementById('play')
+const resetButton = document.getElementById('reset')
+
 
 start.addEventListener('click',play);
+light.addEventListener('click',lightSide);
+dark.addEventListener('click',darkSide);
 
 function play(){
     rAF = requestAnimationFrame(loop);
@@ -167,6 +177,21 @@ function play(){
 function toReset(){
     location.reload();
 }
+
+function darkSide(){
+    body.classList.add("active")
+    canvas.classList.add("active")
+    playButton.classList.add("active")
+    resetButton.classList.add("active")
+}
+
+function lightSide(){
+    body.classList.remove("active")
+    canvas.classList.remove("active")
+    playButton.classList.remove("active")
+    resetButton.classList.remove("active")
+}
+
 
 for (let row = -2; row < 20; row++) {
     playfield[row] = [];
