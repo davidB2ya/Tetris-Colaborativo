@@ -47,4 +47,4 @@ _Bueno este proyecto fue realizado por :_
 
 
 ---
-⌨️ con ❤️ por [David Bedoya] (https://github.com/davidB2ya) 😊  Y  [Luisa Fernanda]  (https://github.com/Fernaandaa) 😊
+⌨️ con ❤️ por [David Bedoya] (https://github.com/davidB2ya) 😊  Y  [Fernanda Cruz]  (https://github.com/Fernaandaa) 😊
