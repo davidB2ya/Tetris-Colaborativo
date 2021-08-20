@@ -26,7 +26,7 @@ body.active{
 }
 
 canvas {
-    border: 2px solid #4bbb8a;
+    border: 2px solid #3498db;
     background-color: rgba(184, 184, 184, 0.192);
     width: 10cm;
     height: 16cm;
@@ -34,7 +34,7 @@ canvas {
 }
 
 canvas.active{
-    border: 2px solid #4bbb8a;
+    border: 2px solid #3498db;
     background-color: rgba(184, 184, 184, 0.192);
     width: 10cm;
     height: 16cm;
@@ -49,7 +49,7 @@ canvas.active{
     border-style: double;
     border-image: initial;
     border-radius: 5px;
-    border-color: #4bbb8a;
+    border-color: #3498db;
     margin: 0rem 2rem 2rem;
     padding: 2rem;
 
@@ -95,7 +95,7 @@ span{
     border-width: 4px;
     border-style: double;
     border-image: initial;
-    border-radius: 20px;
+    border-radius: 5px;
     border-color: rgb(153, 112, 255);
 }
 
@@ -137,12 +137,12 @@ span{
 .points{
     margin: 30px 10px 30px 20px;
     padding: 10px;
-    border: rgb(255, 166, 0) 3px solid;
+    border: rgb(0, 140, 255) 3px solid;
     height: 20px;
     width: 300px;
-    border-radius: 20px;
-    color: rgb(0, 140, 255);
-    background-color: transparent;
+    border-radius: 5px;
+    color: rgb(255, 166, 0) ;
+    background-color: rgba(184, 184, 184, 0.192);
 }
 
 .record{
@@ -151,19 +151,19 @@ span{
     border: rgb(0, 140, 255) 3px solid;
     height: 20px;
     width: 300px;
-    border-radius: 20px;
+    border-radius: 5px;
     color: rgb(255, 166, 0);
-    background-color: transparent;
+    background-color: rgba(184, 184, 184, 0.192);
 }
 
 .dark{
     margin: 40px 20px 40px 0px;
     font-size: 30px;
-    border: #d58bd6 3px solid;
-    border-radius: 15px;
+    border: rgba(173, 17, 17, 0.849) 3px solid;
+    border-radius: 5px;
     height: 50px;
     width: 130px;
-    color: #ec72ee; 
+    color: rgba(173, 17, 17, 0.849); 
     background-color: transparent;
     font-family:"pixel";
     cursor:pointer;
@@ -172,41 +172,26 @@ span{
 .light{
     margin: 40px 15px 40px 18px;
     font-size: 25px;
-    border: rgb(0, 179, 185) 3px solid;
-    border-radius: 15px;
+    border: rgba(52, 182, 52, 0.884) 3px solid;
+    border-radius: 5px;
     height: 50px;
     width: 130px;
-    color: rgb(0, 179, 185);
+    color: rgba(52, 182, 52, 0.884);
     background-color: transparent;
     font-family:"pixel";
     cursor:pointer;
 }
 .color__subtittle__h2{
-    color: #e74c3c;
+    color: rgb(255, 166, 0);
     font-size: 35px;
 }
 
 .color__subtittle__h3{
-    color: rgb(131, 216, 45);
+    color: rgb(255, 166, 0);
     font-size: 25px;
 }
 
 .color__p{
     color: #3498db;
-    font-size: 17px;
-}
-
-.color__p2{
-    color: #f88825;
-    font-size: 17px;
-}
-
-.color__p3{
-    color: rgb(199, 45, 127);
-    font-size: 17px;
-}
-
-.color__p4{
-    color: rgb(214, 200, 2);
     font-size: 17px;
 }
