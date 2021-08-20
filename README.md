@@ -32,7 +32,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 _Bueno este proyecto fue realizado por :_
 
 * **David Bedoya** - *Developer* 
-* **Luisa Fernanda** - *Developer*
+* **Fernanda Cruz** - *Developer*
 * **Lorena Guerrero** - *Formadora*
 * **Juliana Fajardo** - *Formadora*
 
