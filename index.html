@@ -4,12 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Tetrikids</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
-<body>
+<body id="body">
+    <div class="space-left">
+        <div class="info" id="info">
+            <h2 class="color__subtittle__h2">Bienvenidos a TetrisGame</h2>
+            <h3 class="color__subtittle__h3">Instrucciones del Juego</h3>
+            <div class="arrow up">
+                <span><i class="fas fa-chevron-up"></i></span>
+                <p class="color__p">Se utiliza para girar la pieza</p>
+            </div>
+            <div class="arrow right">
+                <span><i class="fas fa-chevron-right"></i></span>
+                <p class="color__p2">Se utiliza para correr la pieza a la derecha</p>
+            </div>
+            <div class="arrow left">
+                <span><i class="fas fa-chevron-left"></i></span>
+                <p class="color__p3">Se utiliza para correr la pieza a la Izquierda</p>
+            </div>
+            <div class="arrow down">
+                <span><i class="fas fa-chevron-down"></i></span>
+                <p class="color__p4">Se utiliza para bajar la pieza más rápido</p>
+            </div>
+        </div>
+        <div class="start"> 
+            <button class="button-start" id="button-start" >Start</button>
+        </div>
+        
+
+    </div>
+    
     <canvas width="320" height="640" id="game"></canvas>
 
+    <div class="botones" id="botones">
+        <div class="pause-play"> 
+            <button class="button" id="play" onclick="playPause()"><i id="icon" class="fas "></i></button>
+            <button class="button" id="reset" onclick="toReset()"><i id="icon-reset" class="fas fa-undo-alt"></i></button>            
+        </div>
+        <p class="points">Puntos Actuales: </p>
+        <p class="record">Record: </p>
+        <button class="light" id="light">Light</button>
+        <button class="dark" id="dark">Dark</button>
+        
+    </div>
+    
     <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
