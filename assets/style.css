@@ -22,10 +22,11 @@ body.active{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 canvas {
-    border: 2px solid white;
+    border: 2px solid #3498db;
     background-color: rgba(184, 184, 184, 0.192);
     width: 10cm;
     height: 16cm;
@@ -33,7 +34,7 @@ canvas {
 }
 
 canvas.active{
-    border: 2px solid white;
+    border: 2px solid #3498db;
     background-color: rgba(184, 184, 184, 0.192);
     width: 10cm;
     height: 16cm;
@@ -41,16 +42,17 @@ canvas.active{
     
 }
 
-.info{
+.info {
     display: inline-block;
-    border: double 4px;
+    background-color: rgba(184, 184, 184, 0.192);
+    border-width: 4px;
+    border-style: double;
+    border-image: initial;
     border-radius: 5px;
-    border-color: rgb(163, 92, 0);
-    background-color: rgba(230, 148, 41, 0.616);
-    margin: 0rem 2rem 2rem 2rem;
-    padding: 1rem;
-    
-    
+    border-color: #3498db;
+    margin: 0rem 2rem 2rem;
+    padding: 2rem;
+
 }
 
 .arrow{
@@ -70,20 +72,31 @@ span{
     border-radius: 4px;
 }
 
+.space-left{
+    display: inline-block;
+    margin: 0rem 2rem 2rem 2rem;
+    
+}
+
 .start{
     display: flex;
     justify-content: center;
     
 }
 
-#button-start{
+#button-start {
     font-size: 30px;
-    border: rgb(128,128,128) 2px solid;
+    width: 140px;
+    height: 50px;
+    color: rgb(144, 105, 241);
+    background-color: transparent;
+    font-family: pixel;
+    cursor: pointer;
+    border-width: 4px;
+    border-style: double;
+    border-image: initial;
     border-radius: 5px;
-    color: crimson;
-    background-color: rgba(235, 202, 111, 0.932);
-    font-family:"pixel";
-    cursor:pointer;
+    border-color: rgb(153, 112, 255);
 }
 
 .botones{
@@ -114,7 +127,7 @@ span{
 
 #icon{
     font-size: 40px; 
-    margin-left: 50px;
+    margin-left: 80px;
 }
 
 #icon-reset{
@@ -122,39 +135,63 @@ span{
 }
 
 .points{
-    margin: 30px 10px 30px 7px;
-    border: rgb(128,128,128) 2px solid;
+    margin: 30px 10px 30px 20px;
+    padding: 10px;
+    border: rgb(0, 140, 255) 3px solid;
+    height: 20px;
+    width: 300px;
     border-radius: 5px;
-    color: rgb(7, 7, 7);
-    background-color: rgba(235, 233, 230, 0.966);
+    color: rgb(255, 166, 0) ;
+    background-color: rgba(184, 184, 184, 0.192);
 }
 
 .record{
-    margin: 30px 10px 30px 7px;
-    border: rgb(128,128,128) 2px solid;
+    margin: 30px 10px 30px 20px;
+    padding: 10px;
+    border: rgb(0, 140, 255) 3px solid;
+    height: 20px;
+    width: 300px;
     border-radius: 5px;
-    color: rgb(7, 7, 7);
-    background-color: rgba(235, 233, 230, 0.966);
+    color: rgb(255, 166, 0);
+    background-color: rgba(184, 184, 184, 0.192);
 }
 
 .dark{
     margin: 40px 20px 40px 0px;
     font-size: 30px;
-    border: rgb(128,128,128) 2px solid;
+    border: rgba(173, 17, 17, 0.849) 3px solid;
     border-radius: 5px;
-    color: rgb(7, 7, 7);
-    background-color: rgba(173, 17, 17, 0.849);
+    height: 50px;
+    width: 130px;
+    color: rgba(173, 17, 17, 0.849); 
+    background-color: transparent;
     font-family:"pixel";
     cursor:pointer;
 }
 
 .light{
-    margin: 40px 5px 40px 6px;
+    margin: 40px 15px 40px 18px;
     font-size: 30px;
-    border: rgb(128,128,128) 2px solid;
+    border: rgba(52, 182, 52, 0.884) 3px solid;
     border-radius: 5px;
-    color: rgb(7, 7, 7);
-    background-color: rgba(52, 182, 52, 0.952);
+    height: 50px;
+    width: 130px;
+    color: rgba(52, 182, 52, 0.884);
+    background-color: transparent;
     font-family:"pixel";
     cursor:pointer;
+}
+.color__subtittle__h2{
+    color: rgb(255, 166, 0);
+    font-size: 35px;
+}
+
+.color__subtittle__h3{
+    color: rgb(255, 166, 0);
+    font-size: 25px;
+}
+
+.color__p{
+    color: #3498db;
+    font-size: 17px;
 }
