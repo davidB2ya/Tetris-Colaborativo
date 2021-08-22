@@ -189,24 +189,6 @@ function play(){
 // Assigned function to restart the game
 function toReset(){
     location.reload();
-    // // context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
-    // cancelAnimationFrame(rAF);
-    // context.clearRect(canvas.width, canvas.height);
-    // // loop()
-    // count = 0;
-    // tetromino = getNextTetromino();
-    // rAF = null; 
-    // gameOver = false;
-    // score = 0;
-    // canvas = document.getElementById("game");
-    // context = canvas.getContext("2d");
-    // grid = 32;
-    // tetrominoSequence = [];
-    // playfield = [];
-    // cellCol = 0;
-    // cellRow = 0;
-    // matrix = 0;
-    // playfield[row][col] = 0;
 }
 
 // Assigned function to switch to dark mode
