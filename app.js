@@ -1,3 +1,8 @@
+// Welcome to Tetris by David Bedoya and Luisa Fernanda
+
+// We use the window.onload syntax to call a function(init) every time the page loads.
+// We use the init() function to bring the 'icon' element and then add the class 'fa-pause' to it.
+// At the end we call the function showStarting() to display a start message on the canvas.
 window.onload = init;
 function init(){
     const icon = document.getElementById('icon');
@@ -5,6 +10,7 @@ function init(){
     showStarting()
 }
 
+// We generate a random integer number
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -12,7 +18,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+// We generate a sequence in a random list
 function generateSequence() {
     const sequence = ["I", "J", "L", "O", "S", "T", "Z", "Y", "U"];
 
@@ -23,7 +29,8 @@ function generateSequence() {
     }
 }
 
-
+// First we check that the sequence list is not empty. In such case we call the function generateSequence() to generate another random sequence.
+// Evaluates the next part you save and removes them from the sequence list.
 function getNextTetromino() {
     if (tetrominoSequence.length === 0) {
         generateSequence();
@@ -46,7 +53,7 @@ function getNextTetromino() {
     };
 }
 
-
+// we use this function to rotate the pieces.
 function rotate(matrix) {
     const N = matrix.length - 1;
     const result = matrix.map((row, i) =>
@@ -57,13 +64,12 @@ function rotate(matrix) {
 }
 
 
+// Evaluate if the movements of the pieces are invalid or not.
 function isValidMove(matrix, cellRow, cellCol) {
     for (let row = 0; row < matrix.length; row++) {
         for (let col = 0; col < matrix[row].length; col++) {
             if (
-                matrix[row][col] &&
-                
-                (cellCol + col < 0 ||
+                matrix[row][col] && (cellCol + col < 0 ||
                     cellCol + col >= playfield[0].length ||
                     cellRow + row >= playfield.length ||
                     
@@ -76,6 +82,8 @@ function isValidMove(matrix, cellRow, cellCol) {
 
     return true;
 }
+
+
 
 function placeTetromino() {
     for (let row = 0; row < tetromino.matrix.length; row++) {
@@ -114,11 +122,11 @@ function placeTetromino() {
     tetromino = getNextTetromino();
 }
 
+// Message before starting the game
 function showStarting() {
     context.fillStyle = "black";
     context.globalAlpha = 0.75;
     context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
-
     context.globalAlpha = 1;
     context.fillStyle = "white";
     context.font = "40px pixel";
@@ -132,14 +140,13 @@ function showStarting() {
     );
 }
 
+// Game Over Message
 function showGameOver() {
     cancelAnimationFrame(rAF);
     gameOver = true;
-
     context.fillStyle = "black";
     context.globalAlpha = 0.75;
     context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
-
     context.globalAlpha = 1;
     context.fillStyle = "white";
     context.font = "40px pixel";
@@ -153,6 +160,7 @@ function showGameOver() {
     );
 }
 
+// Declaration of variables
 const canvas = document.getElementById("game");
 const context = canvas.getContext("2d");
 const grid = 32;
@@ -164,20 +172,44 @@ const dark = document.getElementById("dark");
 const body = document.getElementById("body");
 const playButton = document.getElementById('play')
 const resetButton = document.getElementById('reset')
+const points = document.getElementById('points')
+const record = document.getElementById('record')
 
 
+// Assignment of click event to the three buttons
 start.addEventListener('click',play);
 light.addEventListener('click',lightSide);
 dark.addEventListener('click',darkSide);
 
+// Assigned function to start the game
 function play(){
     rAF = requestAnimationFrame(loop);
 }
 
+// Assigned function to restart the game
 function toReset(){
     location.reload();
+    // // context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
+    // cancelAnimationFrame(rAF);
+    // context.clearRect(canvas.width, canvas.height);
+    // // loop()
+    // count = 0;
+    // tetromino = getNextTetromino();
+    // rAF = null; 
+    // gameOver = false;
+    // score = 0;
+    // canvas = document.getElementById("game");
+    // context = canvas.getContext("2d");
+    // grid = 32;
+    // tetrominoSequence = [];
+    // playfield = [];
+    // cellCol = 0;
+    // cellRow = 0;
+    // matrix = 0;
+    // playfield[row][col] = 0;
 }
 
+// Assigned function to switch to dark mode
 function darkSide(){
     body.classList.add("active")
     canvas.classList.add("active")
@@ -185,6 +217,8 @@ function darkSide(){
     resetButton.classList.add("active")
 }
 
+
+// Assigned function to switch to light mode
 function lightSide(){
     body.classList.remove("active")
     canvas.classList.remove("active")
@@ -192,16 +226,16 @@ function lightSide(){
     resetButton.classList.remove("active")
 }
 
-
+// Nested for loop to evaluate if parts top out or complete a row
 for (let row = -2; row < 20; row++) {
     playfield[row] = [];
-
+    
     for (let col = 0; col < 10; col++) {
         playfield[row][col] = 0;
     }
 }
 
-
+// Array for save the pieces
 const tetrominos = {
     I: [
         [0, 0, 0, 0],
@@ -250,18 +284,8 @@ const tetrominos = {
     ]
 };
 
-            
+// Array to save the colors of the pieces    
 const colors = {
-    // I: "cyan",
-    // O: "yellow",
-    // T: "purple",
-    // S: "green",
-    // Z: "red",
-    // J: "blue",
-    // L: "orange",
-    // Y: "lawngreen",
-    // U: "deeppink"
-        
     I: "#e74c3c",
     O: "#8e44ad",
     T: "#3498db",
@@ -273,12 +297,17 @@ const colors = {
     U: "rgb(199, 45, 127)"
 };
 
+
+// Initialized variables
 let count = 0;
 let tetromino = getNextTetromino();
 let rAF = null; 
 let gameOver = false;
+let score = 0;
+    
 
-            
+
+// Function that executes the animation of each piece on the board which is repeated
 function loop() {
     rAF = requestAnimationFrame(loop);
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -290,13 +319,14 @@ function loop() {
                 const name = playfield[row][col];
                 context.fillStyle = colors[name];
 
-                
                 context.fillRect(
                     col * grid,
                     row * grid,
                     grid - 1,
                     grid - 1
+
                 );
+                
             }
         }
     }
@@ -336,6 +366,7 @@ function loop() {
                         (tetromino.row + row) * grid,
                         grid - 1,
                         grid - 1
+                        
                     );
                 }
             }
@@ -343,7 +374,7 @@ function loop() {
     }
 }
 
-
+// Assign the up, down, right and left keys to the corresponding functions
 document.addEventListener("keydown", function (e) {
     if (gameOver) return;
     if (e.which === 37 || e.which === 39) {
@@ -378,11 +409,7 @@ document.addEventListener("keydown", function (e) {
     }
 });
 
-
-            
-
-
-
+// Function to Pause and continue the game and remove the icon
 const playPause = () => {
     const isPaused = !icon.classList.contains('fa-pause');
     if (isPaused) {
