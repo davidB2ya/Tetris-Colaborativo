@@ -28,18 +28,17 @@ body.active{
 canvas {
     border: 2px solid #3498db;
     background-color: rgba(184, 184, 184, 0.192);
-    width: 10cm;
-    height: 14cm;
+    width: 25rem;
+    height: 35rem;
     border-radius: 5px;
 }
 
 canvas.active{
     border: 2px solid #3498db;
     background-color: rgba(184, 184, 184, 0.192);
-    width: 10cm;
-    height: 16cm;
+    width: 25rem;
+    height: 35rem;
     border-radius: 5px;
-    
 }
 
 .info {
