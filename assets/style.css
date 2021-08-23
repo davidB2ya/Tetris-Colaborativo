@@ -96,6 +96,7 @@ span{
     display: inline-block;
     background-color: transparent;
     margin: 1rem 1rem 1rem 1rem;    
+    text-align: center;
 }
 
 .button{
