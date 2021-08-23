@@ -3,7 +3,8 @@
     src:url(./pixcyr2.ttf);
 }
 
-*{
+html{
+    height: 100%;
     box-sizing: border-box;
     overflow-x: hidden
 }
