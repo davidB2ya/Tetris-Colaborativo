@@ -7,22 +7,14 @@ body {
     height: 100%;
     margin-top: 20px;
     font-family:"pixel";
-}
-
-body {
     background: rgba(241, 238, 238, 0.925);
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    box-sizing: border-box;
 }
 
 body.active{
-    background: rgba(12, 12, 12, 0.925);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    background: rgba(12, 12, 12, 0.925); 
 }
 
 canvas {
@@ -34,11 +26,7 @@ canvas {
 }
 
 canvas.active{
-    border: 2px solid #3498db;
     background-color: rgba(184, 184, 184, 0.192);
-    width: 400px;
-    height: 550px;
-    border-radius: 5px;
 }
 
 .info {
@@ -132,7 +120,7 @@ span{
     font-size: 35px; 
 }
 
-.points{
+/* .points{
     margin: 30px 10px 30px 20px;
     padding: 10px;
     border: rgb(0, 140, 255) 3px solid;
@@ -152,7 +140,7 @@ span{
     border-radius: 5px;
     color: rgb(255, 166, 0);
     background-color: rgba(184, 184, 184, 0.192);
-}
+} */
 
 .dark{
     margin: 40px 0px 40px 0px;
