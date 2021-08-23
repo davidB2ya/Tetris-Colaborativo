@@ -29,7 +29,7 @@ canvas {
     border: 2px solid #3498db;
     background-color: rgba(184, 184, 184, 0.192);
     width: 10cm;
-    height: 16cm;
+    height: 14cm;
     border-radius: 5px;
 }
 
@@ -50,7 +50,7 @@ canvas.active{
     border-image: initial;
     border-radius: 5px;
     border-color: #3498db;
-    margin: 0rem 2rem 1rem;
+    margin-bottom: 2rem;
     padding: 1rem;
 
 }
@@ -103,9 +103,7 @@ span{
 .botones{
     display: inline-block;
     background-color: transparent;
-    margin: 1rem 1rem 1rem 1rem;
-    padding: 1rem;
-    
+    margin: 1rem 1rem 1rem 1rem;    
 }
 
 .button{
@@ -158,7 +156,7 @@ span{
 }
 
 .dark{
-    margin: 40px 20px 40px 0px;
+    margin: 40px 0px 40px 0px;
     font-size: 30px;
     border: rgba(173, 17, 17, 0.849) 3px solid;
     border-radius: 5px;
@@ -172,7 +170,7 @@ span{
 }
 
 .light{
-    margin: 40px 15px 40px 18px;
+    margin: 40px 10px 40px 10px;
     font-size: 30px;
     border: rgba(52, 182, 52, 0.884) 3px solid;
     border-radius: 5px;
