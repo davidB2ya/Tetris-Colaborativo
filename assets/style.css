@@ -51,7 +51,7 @@ canvas.active{
     border-color: #3498db;
     margin-bottom: 2rem;
     padding: 1rem;
-
+    width: 450px;
 }
 
 .arrow{
