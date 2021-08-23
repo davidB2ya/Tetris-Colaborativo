@@ -6,7 +6,7 @@ _Este proyecto como bien dice en el título es acerca de un Tetris que se desarr
 
 _Aquí debajo dejamos el link del proyecto desplegado_
 
- **https://612312ac8f6f870007c8ae24--tetrikids.netlify.app/** .
+ **https://61231419c3f34400087d7cce--tetrikids.netlify.app/** .
 
 
 ### Pre-requisitos 📋
